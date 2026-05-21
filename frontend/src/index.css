@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: #f1f1f1;
+}
+
+/* NAVBAR */
+
+.navbar {
+  width: 100%;
+  background: white;
+  padding: 15px 30px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  color: red;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+/* HOME */
+
+.home {
+  padding: 20px;
+}
+
+/* PIN GRID */
+
+.pin-grid {
+  columns: 4;
+  column-gap: 15px;
+}
+
+/* PIN CARD */
+
+.pin-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  margin-bottom: 15px;
+
+  break-inside: avoid;
+
+  transition: 0.3s;
+}
+
+.pin-card:hover {
+  transform: scale(1.02);
+}
+
+.pin-card img {
+  width: 100%;
+  display: block;
+}
+
+.pin-card h3 {
+  padding: 12px;
+  font-size: 18px;
+}
+
+/* FORM */
+
+.form-container {
+  width: 400px;
+  background: white;
+
+  margin: 40px auto;
+  padding: 25px;
+
+  border-radius: 12px;
+
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-container input {
+  width: 100%;
+
+  padding: 12px;
+  margin-bottom: 15px;
+
+  border: 1px solid #ccc;
+  border-radius: 6px;
+
+  font-size: 16px;
+}
+
+.form-container button {
+  width: 100%;
+
+  padding: 12px;
+
+  background: red;
+  color: white;
+
+  border: none;
+  border-radius: 6px;
+
+  cursor: pointer;
+
+  font-size: 16px;
+}
+
+.form-container button:hover {
+  background: darkred;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+  .pin-grid {
+    columns: 3;
+  }
+
+}
+
+@media (max-width: 700px) {
+
+  .pin-grid {
+    columns: 2;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+}
+
+@media (max-width: 500px) {
+
+  .pin-grid {
+    columns: 1;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+}
